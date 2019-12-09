@@ -11,15 +11,15 @@ The original paper came with a C implementation but this has become more difficu
 This merges a perspective depth map and surface normal map.
 
 Inputs:
-    Z       - H x W perspective depth map
-    NM      - H x W x 3 normal map in cameras coordinates
-    cx,cy,f - camera parameters
-    lambda  - regularisation weight, larger means Z_merged is closer to Z
-    mask    - H x W binary foreground mask (logical)
+1. Z       - H x W perspective depth map
+2. NM      - H x W x 3 normal map in cameras coordinates
+3. cx,cy,f - camera parameters
+4. lambda  - regularisation weight, larger means Z_merged is closer to Z
+5. mask    - H x W binary foreground mask (logical)
 
 Outputs:
-    Z_merged - H x W refined depth map
-    mask     - H x W mask (mask may need to be modified to compute finite differences)
+1. Z_merged - H x W refined depth map
+2. mask     - H x W mask (mask may need to be modified to compute finite differences)
 
 ## mergeMeshNormals.m
 
