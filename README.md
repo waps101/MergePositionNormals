@@ -25,6 +25,15 @@ Outputs:
 
 This merges a mesh and per-vertex surface normals.
 
+Inputs:
+1. V       - nverts x 3 matrix of vertex positions
+2. F       - nfaces x 3 matrix of triangle vertex indices
+3. N       - nverts x 3 matrix of per-vertex surface normals
+4. lambda  - regularisation weight, larger means Vnew is closer to V
+
+Outputs:
+1.  Vnew    - nverts x 3 refined vertex positions
+
 # Citation
 
 This implementation was developed for the following paper:
