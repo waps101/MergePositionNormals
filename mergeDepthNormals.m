@@ -26,7 +26,7 @@ function [Z_merged,mask] = mergeDepthNormals(Z,NM,cx,cy,f,lambda,mask)
 
 [ Dx,Dy,mask,~ ] = gradMatrices( mask,'Backward' );
 
-[x,y]=meshgrid(1:size(mask,2),1:size(mask,1));
+[x,y]=meshgrid(1:size(mask,2),size(mask,1):-1:1);
 
 npix = sum(mask(:));
 
